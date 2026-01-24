@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Exile&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+SAS:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    width: 100%;
+
+    font-family: "Nunito", sans-serif;
+    scroll-behavior: smooth;
+
+    background-image: radial-gradient(white, #878484);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+
+    min-height: 14vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+header div {
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2b2b2b;
+    color: whitesmoke;
+}
+
+header div h1 {
+    font-weight: bolder;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    /*IMPORTANT -> to make the text inside a container responsive*/
+}
+
+#logo1 {
+    display: block;
+    max-height: 100%;
+    width: auto;
+
+    left: 0;
+}
+
+#logo2 {
+    display: block;
+    max-height: 100%;
+    width: auto;
+
+    right: 0;
+}
+
+nav {
+    width: 100%;
+    border: 2px solid black;
+    background-color: rgb(112, 111, 111);
+
+    display: flex;
+    justify-content: space-evenly;
+    /*IMP-> used to evenly space the content in nav bar*/
+    gap: clamp(0.5rem, 3vw, 2rem);
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+
+    container-type: inline-size;
+    box-shadow: 0 6px 5px -5px #000;
+}
+
+nav a,
+nav a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: clamp(0.1rem, 6cqw, 0.8rem);
+}
+
+nav a:hover,
+nav a:focus {
+    color: yellow;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    bottom: 0;
+
+    border: 2px solid black;
+    background-color: #333232;
+    color: whitesmoke;
+
+    text-align: center;
+}
+
+/* Utility */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* MAIN */
+main {
+    min-height: 100vh;
+
+
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+figure img {
+    /*IMPORTANT -> used to make the images responsive*/
+    display: block;
+    max-width: 100%;
+    height: 300px;
+
+    border: 5px double black;
+    border-radius: 50%;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    scroll-margin-top: 8rem;
+
+    width: min(100%, 350px);
+    padding: 1rem;
+
+    background-color: #cad9eb;
+    border: 2px solid black;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:target{  /* here target is the pseudo class*/
+    border: 5px solid yellow;
+}
+
+.name {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+figcaption .name::after{
+    content: ' 🏏';  /*This will insert this text at the end of div content*/
+    display: block;
+}
+
+
+/* Very Small*/
+@media screen and (max-width: 576px) {
+    figure {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    main{
+        flex-direction: column;
+    }
+}
+
+/* Small */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .card {
+        flex-flow: row wrap;
+        min-width: max(50%, 400px);
+    }
+
+    figure {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    main {
+        flex-direction: column;
+    }
+}
+
+/* Medium */
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .card {
+        min-width: max(80%, 400px);
+    }
+
+    figure {
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    figure div figcaption {
+        align-items: center;
+        padding: 10%;
+    }
+
+    figure div {
+        padding-right: 10%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    main{
+        flex-direction: column;
+    }
+}
+
+/* Large
+@media screen and (min-width: 992px) {
+    main{
+        display: flex;
+        
+    }
+    figure{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    figure div {
+        padding: 0;
+    }
+    .card {
+        width: 350px;
+    }
+    body {
+        background-color: rgb(228, 171, 13);
+        background-image: radial-gradient(white, rgb(228, 171, 13));
+    }
+} */
+
+/* Extra Large */
+@media screen and (min-width: 1100px) {
+    main {
+        margin-top: 10vh;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    nav {
+        display: none;
+    }
+
+    .card {
+        width: 400px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    figure {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+}

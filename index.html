@@ -1,0 +1,118 @@
+<!-- This PROJECT is made to practise how to make a website RESPONSIVE -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mini Project: Card Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo1" src="images/logo.jpg" alt="BCCI Logo">
+            <h1>Indian Cricketers</h1>
+            <img id="logo2" src="images/logo.jpg" alt="BCCI Logo">
+        </div>
+        <nav>
+            <a href="#profile1" target="_parent">Ms Dhoni</a>
+            <a href="#profile2" target="_parent">Virat Kohli</a>
+            <a href="#profile3" target="_parent">Rohit Sharma</a>
+            <a href="#profile4" target="_parent">Sachin Tendulkar</a>
+            <a href="#profile5" target="_parent">Yuvraj Singh</a>
+            <a href="#profile6" target="_parent">Jasprit Bumrah</a>
+        </nav>
+    </header>
+    <main>
+        <article id="profile1" class="card">
+            <figure>
+                <img src="images/pfp1.jpg" alt="Ms Dhoni" height="300px" width="300px">
+                <div>
+                    <figcaption>
+                        <p class="name"> M.S. Dhoni</p>
+                        <p>Age: 44</p>
+                        <p><span class="nowrap">Right-Handed Batsman</span></p>
+                        <p>ODI Runs: 10773</p>
+                    </figcaption>
+                </div>
+            </figure>
+        </article>
+        <article id="profile2" class="card">
+            <figure>
+                <img src="images/pfp2.jpg" alt="Virat Kohli" height="300px" width="300px">
+                <div>
+                    <figcaption>
+                        <p class="name">Virat Kohli</p>
+                        <p>Age: 37</p>
+                        <p><span class="nowrap">Right-Handed Batsman</span></p>
+                        <p>ODI Runs: 14557</p>
+                    </figcaption>
+                </div>
+            </figure>
+        </article>
+        <article id="profile3" class="card">
+            <figure>
+                <img src="images/pfp3.jpg" alt="Rohit Sharma" height="300px" width="300px">
+                <div>
+                    <figcaption>
+                        <p class="name">Rohit Sharma</p>
+                        <p>Age: 38</p>
+                        <p><span class="nowrap">Right-Handed Batsman</span></p>  
+                        <!--IMPORTANT so that last name doesnt split into 2-->
+                        <p>ODI Runs: 11516</p>
+                    </figcaption>
+                </div>
+            </figure>
+        </article>
+        <article id="profile4" class="card">
+            <figure>
+                <img src="images/pfp4.jpg" alt="Sachin Tendulkar" height="300px" width="300px">
+                <div>
+                    <figcaption>
+                        <p class="name">Sachin Tendulkar</p>
+                        <p>Age: 53</p>
+                        <p><span class="nowrap">Right-Handed Batsman</span></p>  
+                        <!--IMPORTANT so that last name doesnt split into 2-->
+                        <p>ODI Runs: 18426</p>
+                    </figcaption>
+                </div>
+            </figure>
+        </article>
+        <article id="profile5" class="card">
+            <figure>
+                <img src="images/pfp5.jpg" alt="Yuvraj Singh" height="300px" width="300px">
+                <div>
+                    <figcaption>
+                        <p class="name">Yuvraj Singh</p>
+                        <p>Age: 44</p>
+                        <p><span class="nowrap">Left-Handed Batsman</span></p>  
+                        <!--IMPORTANT so that last name doesnt split into 2-->
+                        <p>ODI Runs: 8701</p>
+                    </figcaption>
+                </div>
+            </figure>
+        </article>
+        <article id="profile6" class="card">
+            <figure>
+                <img src="images/pfp6.jpg" alt="Jasprit Bumrah" height="300px" width="300px">
+                <div>
+                    <figcaption>
+                        <p class="name">Jasprit Bumrah</p>
+                        <p>Age: 32</p>
+                        <p><span class="nowrap">Right-Arm Fast Bowler</span></p>  
+                        <!--IMPORTANT so that last name doesnt split into 2-->
+                        <p>ODI Wickets: 149</p>
+                    </figcaption>
+                </div>
+            </figure>
+        </article>
+    </main>
+    <footer>
+        <p><span class="nowrap">&copy; Bcci Co.</span></p>
+    </footer>
+</body>
+
+</html>
